@@ -1,0 +1,143 @@
+</div>
+</div>
+</body>
+</html>
+<DOCTYPE HTML>
+    <head>
+        <meta charset="utf-8" />
+        <title>Inicio</title>
+        
+        <script>
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                /* Loop through a collection of all HTML elements: */
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    /search for elements with a certain atrribute:/
+                    file = elmnt.getAttribute("w3-include-html");
+                    if (file) {
+                        /* Make an HTTP request using the attribute value as the file name: */
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                                /* Remove the attribute, and call this function once more: */
+                                elmnt.removeAttribute("w3-include-html");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        /* Exit the function: */
+                        return;
+                    }
+                }
+            }
+        </script>
+        <style>
+            th,td{
+                border: 1px solid rgb(18, 6, 68);
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    
+    
+    <body>
+        <div id="contenedor" style="width: 1000px; height: 1000px;">
+            <header style="width: 1100px; height: 150px;">
+                <div id="logo" style="background-color: rgb(255, 255, 255);width:200px; height: 150px;float:left ; border: solid right;">
+                    <center><img src="guitar/logo.jfif" width="140px" height="140px"></center>
+                </div>
+                <div 
+                
+                id="slogan" style="background-color: rgb(199, 222, 223); width: 800px; height:150px; float: left;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 30;">
+                    <center>
+                        <style>
+                            .titulo-animado {
+                                font-size: 2em;
+                                color: #000000;
+                                animation: parpadeo 2s infinite;
+                            }
+                            @keyframes parpadeo {
+                                0%, 100% { opacity: 1; }
+                                50% { opacity: 0; }
+                            }
+                        </style>
+                        <h1 class="titulo-animado">Curiosidades Rigo</h1>
+                    </center>
+                </div>
+            </header>
+    
+            <div w3-include-html="Menu.html"></div>
+            <aside style="background-color: #088888; width: 190px; height: 615px; float: left;">
+                <p style="text-align: center;">
+                    <button onclick="location.href='Guitarras%20electricas.html'" style="width: 70%; padding: 10px; margin-bottom: 10px;">Guitarras eléctricas</button>
+                    <button onclick="location.href='Guitarras%20de%20doce%20cuerdas.html'" style="width: 70%; padding: 10px; margin-bottom: 10px;">Guitarras de doce cuerdas</button>
+                    <button onclick="location.href='Guitarras%20clasicas.html'" style="width: 70%; padding: 10px; margin-bottom: 10px;">Guitarras clásicas</button>
+                </p>
+            </aside>    
+                </p>
+            </aside>
+            <section style="background-color: rgb(218, 222, 223); width: 800px; height: 600px;float: right;">
+                <p style="color:rgb(35, 4, 75); font-size:22px; font-family:cursive;">.................................................................................................................................................</p>
+                <article style="text-align: center;margin-right: 30;margin-left: 30;">
+                    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 25px;"><center>Historia de la guitarra</center></h1>
+                    <p style="text-align: justify;">La historia de la guitarra es fascinante y se remonta a miles de años atrás. 
+                    Los primeros instrumentos de cuerda que se asemejan a la guitarra moderna aparecieron en la antigua Persia, 
+                    donde se utilizaba un instrumento llamado “setar”. Durante la Edad Media, 
+                    la guitarra llegó a España a través de la influencia árabe. </p></text-align justify>
+                    <p style="text-align: justify;">
+                    En el siglo XV, se desarrolló el prototipo de la 
+                    guitarra moderna en España. En el Renacimiento, la guitarra se popularizó en toda Europa. Durante el Barroco, 
+                    se añadieron más cuerdas y se mejoró su diseño. En el siglo XIX, la guitarra se adaptó a nuevos estilos musicales 
+                    como el flamenco en España y la música popular en Europa. En el siglo XX y la actualidad, la guitarra se convirtió 
+                    en un instrumento fundamental en géneros como el jazz, el rock y la música folklórica. Hoy en día, existen diferentes 
+                    tipos de guitarras, como la acústica, la eléctrica y la clásica. La guitarra ha sido un instrumento clave en la música 
+                    y la cultura a lo largo de la historia, evolucionando constantemente y adaptándose a diferentes estilos musicales.</p>
+
+                    <br>
+                    <div style="display: flex; gap: 60px;">
+                    <a href="htecidi%C3%B3%20vender%20licencias%20f%C3%ADlmicas%20y%20esta%20situaci%C3%B3n,incluye%20a%20Venom%2C%20le%20pertenecen%20a%20esta%20compa%C3%B1%C3%ADa."
+                        target="_blank"> <img src="guitar/guitarras1.jfif" width="200" height="150"></img></a>
+                        <a href="guitar/guitarras2.jfif"
+                            target="_blank"> <img src="guitar/guitarras3.jfif" width="200" height="150"></img></a>
+                            <a href="" target="_blank"> <img src="guitar/guitarras2.jfif" width="150" height="150"></img></a>
+                    </div>
+                </article>
+            </section>
+            <style>
+                .contenedor {
+                    width: 100%;
+                    background-color: #f0f0f0;
+                }
+                .caja {
+                    width: 99%;
+                    float: right;
+                    margin: 1px;
+                    background-color: #e28f11;
+                    padding: 5px;
+                    text-align: center;
+                }
+                .clear {
+                    clear: both;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="contenedor">
+                <div class="caja">Copyright ©
+                    W3Schools.com</div>
+    
+    
+        <script>
+            includeHTML();
+        </script>
+    </body>
+    
+    </html>
+
+
+
